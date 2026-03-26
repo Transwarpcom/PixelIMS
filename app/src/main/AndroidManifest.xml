@@ -15,7 +15,7 @@
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.TurbolIms">
+            android:theme="@style/Theme.PixelIMS">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,7 +24,7 @@
         <activity
             android:name=".ui.LogcatActivity"
             android:exported="true"
-            android:theme="@style/Theme.TurbolIms" />
+            android:theme="@style/Theme.PixelIMS" />
 
         <provider
             android:name=".ShizukuProvider"

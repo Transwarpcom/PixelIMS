@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TurbolIms"
+rootProject.name = "PixelIMS"
 include(":app")
 include(":stub")
