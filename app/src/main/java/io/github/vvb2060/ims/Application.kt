@@ -70,30 +70,25 @@ class Application : Application() {
                         val prefs = context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
                         if (prefs.all.isEmpty()) continue
 
-                        val carrierName = if (subId == -1) null else prefs.getString(Feature.CARRIER_NAME.name, Feature.CARRIER_NAME.defaultValue as String)
-                        val imsUserAgent = if (subId == -1) null else prefs.getString(Feature.IMS_USER_AGENT.name, Feature.IMS_USER_AGENT.defaultValue as String)
-                        val enableVoLTE = prefs.getBoolean(Feature.VOLTE.name, Feature.VOLTE.defaultValue as Boolean)
-                        val enableVoWiFi = prefs.getBoolean(Feature.VOWIFI.name, Feature.VOWIFI.defaultValue as Boolean)
-                        val enableVT = prefs.getBoolean(Feature.VT.name, Feature.VT.defaultValue as Boolean)
-                        val enableVoNR = prefs.getBoolean(Feature.VONR.name, Feature.VONR.defaultValue as Boolean)
-                        val enableCrossSIM = prefs.getBoolean(Feature.CROSS_SIM.name, Feature.CROSS_SIM.defaultValue as Boolean)
-                        val enableUT = prefs.getBoolean(Feature.UT.name, Feature.UT.defaultValue as Boolean)
-                        val enable5GNR = prefs.getBoolean(Feature.FIVE_G_NR.name, Feature.FIVE_G_NR.defaultValue as Boolean)
-                        val enable5GThreshold = prefs.getBoolean(Feature.FIVE_G_THRESHOLDS.name, Feature.FIVE_G_THRESHOLDS.defaultValue as Boolean)
-                        val enableShow4GForLTE = prefs.getBoolean(Feature.SHOW_4G_FOR_LTE.name, Feature.SHOW_4G_FOR_LTE.defaultValue as Boolean)
+                        val featureValues = Feature.entries.associate { feature ->
+                            feature to when (feature.valueType) {
+                                FeatureValueType.STRING -> prefs.getString(feature.name, feature.defaultValue as? String)
+                                FeatureValueType.BOOLEAN -> prefs.getBoolean(feature.name, feature.defaultValue as? Boolean ?: false)
+                            }
+                        }
 
                         val bundle = ImsModifier.buildBundle(
-                            carrierName,
-                            imsUserAgent,
-                            enableVoLTE,
-                            enableVoWiFi,
-                            enableVT,
-                            enableVoNR,
-                            enableCrossSIM,
-                            enableUT,
-                            enable5GNR,
-                            enable5GThreshold,
-                            enableShow4GForLTE
+                            carrierName = if (subId == -1) null else featureValues[Feature.CARRIER_NAME] as? String,
+                            imsUserAgent = if (subId == -1) null else featureValues[Feature.IMS_USER_AGENT] as? String,
+                            enableVoLTE = featureValues[Feature.VOLTE] as? Boolean ?: false,
+                            enableVoWiFi = featureValues[Feature.VOWIFI] as? Boolean ?: false,
+                            enableVT = featureValues[Feature.VT] as? Boolean ?: false,
+                            enableVoNR = featureValues[Feature.VONR] as? Boolean ?: false,
+                            enableCrossSIM = featureValues[Feature.CROSS_SIM] as? Boolean ?: false,
+                            enableUT = featureValues[Feature.UT] as? Boolean ?: false,
+                            enable5GNR = featureValues[Feature.FIVE_G_NR] as? Boolean ?: false,
+                            enable5GThreshold = featureValues[Feature.FIVE_G_THRESHOLDS] as? Boolean ?: false,
+                            enableShow4GForLTE = featureValues[Feature.SHOW_4G_FOR_LTE] as? Boolean ?: false
                         )
                         bundle.putInt(ImsModifier.BUNDLE_SELECT_SIM_ID, subId)
 
