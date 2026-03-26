@@ -1,7 +1,7 @@
-# TurboIMS
+# PixelIMS
 
 <p align="center">
-  <img src="app/src/main/ic_launcher-playstore.png" width="200" alt="TurboIMS Logo"/>
+  <img src="app/src/main/ic_launcher-playstore.png" width="200" alt="PixelIMS Logo"/>
 </p>
 
 <p align="center">
@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Mystery00/TurboIMS/releases"><img src="https://img.shields.io/github/v/release/Mystery00/TurboIMS" alt="GitHub release"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/Mystery00/TurboIMS" alt="License"></a>
-    <a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Mystery00/TurboIMS"><img src="https://img.shields.io/badge/Obtainium-Import-blue?logo=obtainium&logoColor=white" alt="Obtainium"></a>
+    <a href="https://github.com/Transwarpcom/PixelIMS/releases"><img src="https://img.shields.io/github/v/release/Transwarpcom/PixelIMS" alt="GitHub release"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/Transwarpcom/PixelIMS" alt="License"></a>
+    <a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Transwarpcom/PixelIMS"><img src="https://img.shields.io/badge/Obtainium-Import-blue?logo=obtainium&logoColor=white" alt="Obtainium"></a>
 </p>
 
 [English](README.md)
@@ -25,7 +25,7 @@
 
 ## 关于
 
-TurboIMS 是一个允许您在 Google Pixel 手机上启用或禁用 VoLTE（高清语音通话）、VoWiFi（Wi-Fi 通话）、VT（视频通话）和 VoNR（5G 语音）等 IMS 功能的工具。它需要 [Shizuku](https://shizuku.rikka.app/zh-CN/) 才能工作。
+PixelIMS 是一个允许您在 Google Pixel 手机上启用或禁用 VoLTE（高清语音通话）、VoWiFi（Wi-Fi 通话）、VT（视频通话）和 VoNR（5G 语音）等 IMS 功能的工具。它需要 [Shizuku](https://shizuku.rikka.app/zh-CN/) 才能工作。
 
 ## 功能
 
@@ -46,7 +46,7 @@ TurboIMS 是一个允许您在 Google Pixel 手机上启用或禁用 VoLTE（高
     - **5G 信号强度阈值**: 可选择是否应用自定义的 5G 信号强度阈值。
 - **配置持久化**: 自动保存每张 SIM 卡的配置。
 
-> **注意：** 运营商国家码自定义功能已从 TurboIMS 中移除。如需使用该功能，请参考 [carrier-ims-for-pixel](https://github.com/ryfineZ/carrier-ims-for-pixel)。
+> **注意：** 运营商国家码自定义功能已从 PixelIMS 中移除。如需使用该功能，请参考 [carrier-ims-for-pixel](https://github.com/ryfineZ/carrier-ims-for-pixel)。
 
 ## 要求
 
@@ -63,9 +63,9 @@ TurboIMS 是一个允许您在 Google Pixel 手机上启用或禁用 VoLTE（高
 
 ## 安装
 
-<a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Mystery00/TurboIMS"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png" alt="Obtainium" height="96"></a>
+<a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Transwarpcom/PixelIMS"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png" alt="Obtainium" height="96"></a>
 
-1.  从 [Releases](https://github.com/Mystery00/TurboIMS/releases) 页面下载最新的 APK。
+1.  从 [Releases](https://github.com/Transwarpcom/PixelIMS/releases) 页面下载最新的 APK。
 2.  在您的设备上安装 APK。
 3.  打开应用并授予 Shizuku 权限。
 
@@ -79,9 +79,9 @@ TurboIMS 是一个允许您在 Google Pixel 手机上启用或禁用 VoLTE（高
 
 ## 项目说明
 
-本项目最初 fork 自 [Turbo1123/TurboIMS](https://github.com/Turbo1123/TurboIMS)。在使用原项目的过程中，由于遇到诸多问题，我决定对整个代码库进行彻底重构。这包括重写 SIM 卡读取、运营商配置的核心逻辑，以及重新设计 UI 和图标。
+本项目最初 fork 自 [Mystery00/TurboIMS](https://github.com/Mystery00/TurboIMS)，并由 Transwarpcom 重命名为了 PixelIMS。在使用原项目的过程中，由于遇到诸多问题，我决定对整个代码库进行彻底重构。这包括重写 SIM 卡读取、运营商配置的核心逻辑，以及重新设计 UI 和图标。
 
-此外，本项目还引入了**运营商名称修改**和**日志查看**等新功能。尽管本项目保留了原有的 fork 关系和名称，但代码逻辑已发生根本性变化，几乎与原项目无关，因此后续不计划合并上游代码。作为我自己和朋友们日常使用的工具，只要大家还有需求，我就会持续维护下去。
+此外，本项目还引入了**运营商名称修改**和**日志查看**等新功能。尽管本项目保留了原有的 fork 关系，但代码逻辑已发生根本性变化，几乎与原项目无关，因此后续不计划合并上游代码。作为我自己和朋友们日常使用的工具，只要大家还有需求，我就会持续维护下去。
 
 ## 鸣谢
 

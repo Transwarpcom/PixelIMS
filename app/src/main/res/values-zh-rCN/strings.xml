@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Turbo IMS</string>
-    <string name="for_pixel">forked by Mystery0</string>
+    <string name="app_name">Pixel IMS</string>
+    <string name="for_pixel">forked by Transwarpcom</string>
 
     <!-- Main Screen -->
     <string name="system_info">系统信息</string>

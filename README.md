@@ -1,7 +1,7 @@
-# TurboIMS
+# PixelIMS
 
 <p align="center">
-  <img src="app/src/main/ic_launcher-playstore.png" width="200" alt="TurboIMS Logo"/>
+  <img src="app/src/main/ic_launcher-playstore.png" width="200" alt="PixelIMS Logo"/>
 </p>
 
 <p align="center">
@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Mystery00/TurboIMS/releases"><img src="https://img.shields.io/github/v/release/Mystery00/TurboIMS" alt="GitHub release"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/Mystery00/TurboIMS" alt="License"></a>
-    <a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Mystery00/TurboIMS"><img src="https://img.shields.io/badge/Obtainium-Import-blue?logo=obtainium&logoColor=white" alt="Obtainium"></a>
+    <a href="https://github.com/Transwarpcom/PixelIMS/releases"><img src="https://img.shields.io/github/v/release/Transwarpcom/PixelIMS" alt="GitHub release"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/Transwarpcom/PixelIMS" alt="License"></a>
+    <a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Transwarpcom/PixelIMS"><img src="https://img.shields.io/badge/Obtainium-Import-blue?logo=obtainium&logoColor=white" alt="Obtainium"></a>
 </p>
 
 [简体中文](README_CN.md)
@@ -25,7 +25,7 @@
 
 ## About
 
-TurboIMS is a tool that allows you to enable or disable IMS features like Voice over LTE (VoLTE), Wi-Fi Calling (VoWiFi), Video Calling (VT), and 5G Voice (VoNR) on Google Pixel phones. It requires [Shizuku](https://shizuku.rikka.app/) to work.
+PixelIMS is a tool that allows you to enable or disable IMS features like Voice over LTE (VoLTE), Wi-Fi Calling (VoWiFi), Video Calling (VT), and 5G Voice (VoNR) on Google Pixel phones. It requires [Shizuku](https://shizuku.rikka.app/) to work.
 
 ## Features
 
@@ -46,7 +46,7 @@ TurboIMS is a tool that allows you to enable or disable IMS features like Voice 
     - **5G Signal Strength Thresholds**: Option to apply custom 5G signal strength thresholds.
 - **Configuration Persistence**: Automatically saves configuration per SIM card.
 
-> **Note:** Country ISO customization has been removed from TurboIMS. If you need this feature, please use [carrier-ims-for-pixel](https://github.com/ryfineZ/carrier-ims-for-pixel).
+> **Note:** Country ISO customization has been removed from PixelIMS. If you need this feature, please use [carrier-ims-for-pixel](https://github.com/ryfineZ/carrier-ims-for-pixel).
 
 ## Requirements
 
@@ -63,9 +63,9 @@ TurboIMS is a tool that allows you to enable or disable IMS features like Voice 
 
 ## Installation
 
-<a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Mystery00/TurboIMS"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png" alt="Obtainium" height="96"></a>
+<a href="https://apps.obtainium.imranr.dev/redirect.html?r=obtainium://add/https://github.com/Transwarpcom/PixelIMS"><img src="https://raw.githubusercontent.com/ImranR98/Obtainium/refs/heads/main/assets/graphics/badge_obtainium.png" alt="Obtainium" height="96"></a>
 
-1.  Download the latest APK from the [Releases](https://github.com/Mystery00/TurboIMS/releases) page.
+1.  Download the latest APK from the [Releases](https://github.com/Transwarpcom/PixelIMS/releases) page.
 2.  Install the APK on your device.
 3.  Open the app and grant Shizuku permission.
 
@@ -79,9 +79,9 @@ TurboIMS is a tool that allows you to enable or disable IMS features like Voice 
 
 ## About this Project
 
-This project originated as a fork of [Turbo1123/TurboIMS](https://github.com/Turbo1123/TurboIMS). However, due to various stability issues encountered during usage, the codebase has undergone a complete refactoring. This includes rewriting the core logic for SIM card reading and carrier configuration, as well as redesigning the UI and icons.
+This project originated as a fork of [Mystery00/TurboIMS](https://github.com/Mystery00/TurboIMS) and was renamed to PixelIMS by Transwarpcom. Due to various stability issues encountered during usage, the codebase has undergone a complete refactoring. This includes rewriting the core logic for SIM card reading and carrier configuration, as well as redesigning the UI and icons.
 
-Major new features, such as **Carrier Name modification** and **Logcat viewer**, have also been introduced. Although the project retains the original name and fork history, the code has diverged significantly, and there are no plans to merge upstream changes. As an active user myself along with friends, I am committed to maintaining this project for as long as it serves a purpose.
+Additionally, new features such as **Carrier Name Modification** and **Log Viewer** have been introduced. Although this project retains the original fork relationship, the code logic has fundamentally changed and is almost entirely unrelated to the original project. Therefore, there are no plans to merge upstream code in the future. As a tool used daily by myself and my friends, I will continue to maintain it as long as there is demand.
 
 ## Credits
 
