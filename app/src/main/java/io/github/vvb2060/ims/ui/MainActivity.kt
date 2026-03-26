@@ -348,7 +348,7 @@ fun SystemInfoCard(
                 )
                 Spacer(modifier = Modifier.weight(1F))
                 IconButton(onClick = {
-                    uriHandler.openUri("https://github.com/Mystery00/TurboIMS")
+                    uriHandler.openUri("https://github.com/Transwarpcom/PixelIMS")
                 }) {
                     Icon(painterResource(R.drawable.ic_github), null)
                 }
