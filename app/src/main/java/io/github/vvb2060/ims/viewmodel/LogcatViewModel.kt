@@ -33,7 +33,7 @@ class LogcatViewModel(application: Application) : AndroidViewModel(application) 
                 appendText("System Build Version: ${Build.DISPLAY}\n")
                 appendText("Security Patch Version: ${Build.VERSION.SECURITY_PATCH}\n")
                 appendText("-----------------------------------------------------------------")
-                appendText("TurboIms Logcat:\n")
+                appendText("PixelIMS Logcat:\n")
                 logs.map { it.raw }.forEach {
                     appendText(it + "\n")
                 }
