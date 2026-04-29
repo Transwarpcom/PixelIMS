@@ -15,6 +15,13 @@ import java.io.File
 
 class Application : Application() {
 
+
+    private val requestPermissionResultListener = Shizuku.OnRequestPermissionResultListener { requestCode, grantResult ->
+        if (grantResult == PackageManager.PERMISSION_GRANTED) {
+            tryApplyConfigs(this)
+        }
+    }
+
     private val binderReceivedListener = Shizuku.OnBinderReceivedListener {
         tryApplyConfigs(this)
     }
@@ -22,11 +29,13 @@ class Application : Application() {
     override fun onCreate() {
         super.onCreate()
         Shizuku.addBinderReceivedListener(binderReceivedListener)
+        Shizuku.addRequestPermissionResultListener(requestPermissionResultListener)
     }
 
     override fun onTerminate() {
         super.onTerminate()
         Shizuku.removeBinderReceivedListener(binderReceivedListener)
+        Shizuku.removeRequestPermissionResultListener(requestPermissionResultListener)
         LogcatRepository.stopAndClear()
     }
 
@@ -43,7 +52,14 @@ class Application : Application() {
             }
 
             if (Shizuku.checkSelfPermission() != PackageManager.PERMISSION_GRANTED) {
-                Log.d("Application", "Shizuku permission not granted, skip applying configs")
+                Log.d("Application", "Shizuku permission not granted, requesting permission")
+                if (!Shizuku.isPreV11() && !Shizuku.shouldShowRequestPermissionRationale()) {
+                    try {
+                        Shizuku.requestPermission(0)
+                    } catch (e: Exception) {
+                        Log.e("Application", "Failed to request Shizuku permission", e)
+                    }
+                }
                 return
             }
 
